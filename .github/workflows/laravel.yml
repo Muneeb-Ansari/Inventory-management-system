@@ -1,4 +1,4 @@
-$ymlContent = @'
+$ymlContent = <<<YAML
 name: Laravel CI/CD
 
 on:
@@ -45,6 +45,7 @@ jobs:
         DB_DATABASE: laravel_test
         DB_USERNAME: root
         DB_PASSWORD: root
-'@
+YAML;
+
 $filePath = '.github/workflows/laravel.yml';
 file_put_contents($filePath, $ymlContent);
